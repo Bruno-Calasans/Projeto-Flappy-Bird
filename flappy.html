@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy bird</title>
+    <link rel="stylesheet" href="flappy.css">
+    <script src="Teste.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+    <body>
+
+        <h1 id="title">Flappy bird</h1>
+
+        <div id="tela">
+
+            <!--modais-->
+            <div class="modal">Modal
+                <span class="material-icons modal-fechar">close</span>
+            </div>
+
+            <!--menus de controle-->
+            <div id="menu">
+                
+                <div id="play-pause">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+
+                <div id="restart">
+                    <i class="material-icons">replay</i>
+                </div>
+
+                <div id="controles"> 
+                    <i class="material-icons">sports_esports</i>
+                    
+                </div>
+
+            </div>
+
+            <!--o pássaro em si-->
+            <img id="bird" src="images/passaro.png" alt="bird"></img>
+
+            <!--as barreairas/canos-->
+            <div class="canos">
+
+                <div class="cano-superior">
+                    <div class="corpo"></div>
+                    <div class="head"></div>
+                </div>
+
+                <div class="cano-inferior">
+                    <div class="head"></div>
+                    <div class="corpo"></div>
+                </div>
+            </div>
+
+            <!--placar-->
+            <div id="score">Score:<span id="pontos">0</span> </div>
+            
+        </div>
+        
+    </body>
+
+    <script>
+
+        // adicionando eventos de clicks para todos os elementos da classe 'modal'
+        let fecharModalBtns = document.getElementsByClassName('modal-fechar')
+        let modais = document.getElementsByClassName('modal')
+
+        for(let i = 0; i < modais.length; i++){
+
+            fecharModalBtns[i].onclick = () => {
+                modais[i].style.display = 'none'
+
+            }
+        }
+    </script>
+
+</html>
